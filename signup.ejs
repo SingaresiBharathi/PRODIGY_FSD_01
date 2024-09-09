@@ -1,0 +1,39 @@
+<!-- signup page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+    <form action="/signup" method="post">
+        <h1>Sign Up</h1>
+        <div class="in">
+            <label for="name">Name:</label>
+            <input class="namei" id="name" name="username" placeholder="Enter name"><br>
+        </div>
+            <div class="in">
+            <label for="pw">Password:</label>
+            <input class="pww" id="pw" name="password" type="password" placeholder="Enter Password">
+            </div>
+            <input type="checkbox" id="check" onclick="myFunction()">Show Password
+
+            <script>
+            function myFunction() {
+            var x = document.getElementById("pw");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+            }
+            </script>
+        <button class="btn" type="submit">Sign Up</button>
+    </form>
+    <p>Already have an account <a href="/login">SignIn</a></p>
+</div>
+</body>
+</html>

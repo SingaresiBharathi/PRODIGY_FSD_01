@@ -1,0 +1,40 @@
+<!-- login page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+    <form action="/login" method="post">
+        <h1>Login</h1>
+        <div class="in">
+            <label for="name">Name:</label>
+            <input class="namei" id="name" name="username" placeholder="Enter name"><br>
+        </div>
+            <div class="in">
+            <label for="pw">Password:</label>
+            <input class="pww" id="pw" type="password" name="password" placeholder="Enter Password">
+
+            </div>
+            <input type="checkbox" id="check" onclick="myFunction()">Show Password
+
+                <script>
+                function myFunction() {
+                var x = document.getElementById("pw");
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+                }
+                </script>
+        <button class="btn" type="submit">Login</button>
+    </form>
+    <p>Don't have an account <a href="/signup">SignUp</a></p>
+</div>
+</body>
+</html>
